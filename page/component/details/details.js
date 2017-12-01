@@ -13,11 +13,29 @@ Page({
       service: '不支持退货'
     },
     num: 1,
+    pics: [],
+    tests:[],
     totalNum: 0,
     hasCarts: false,
     curIndex: 0,
     show: false,
     scaleCart: false
+  },
+
+
+  onReady() {//获取详情
+   var self = this;
+    wx.request({
+      url: 'http://localhost:8080/yMybatis/good/get_all',
+       success(res) {
+         console.log(res.data);
+         self.setData({
+           pics: res.data,
+          
+         });
+         
+      }
+    });
   },
 
   addCount() {

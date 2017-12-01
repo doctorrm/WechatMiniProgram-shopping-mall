@@ -29,17 +29,33 @@
     <view class="newest">
         <view class="newest-title"><text>新品</text></view>
         <view class="newest-box">
+  
+  <view wx:for="{{goods}}"  wx:key="index" data-id="{{item.goodId}}">
+             <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="{{item.goodMainUrl}}"></image>
+                    <view class="newest-text"><text>{{item.goodName}}</text></view>
+                    <view class="newest-text"><text>￥ {{item.goodPrice}}</text></view>
+                </navigator>
+            </view>
+  
+   </view> 
+<!-- 
+
+
+
+
             <view class="newest-list">
                 <navigator url="details/details">
                     <image src="/image/s4.png"></image>
-                    <view class="newest-text"><text>瓜子 100g</text></view>
+                    <view class="newest-text"><text>瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子</text></view>
                     <view class="newest-text"><text>￥ 0.01</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
                     <image src="/image/s5.png"></image>
-                    <view class="newest-text"><text>芹菜 半斤</text></view>
+                    <view class="newest-text"><text>芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜半斤</text></view>
                     <view class="newest-text"><text>￥ 0.02</text></view>
                 </navigator>
             </view>
@@ -91,7 +107,7 @@
                     <view class="newest-text"><text>素米 375g</text></view>
                     <view class="newest-text"><text>￥ 0.03</text></view>
                 </navigator>
-            </view>
+            </view> -->
         </view>
     </view>
 </view>
