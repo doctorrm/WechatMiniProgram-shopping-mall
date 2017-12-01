@@ -7,7 +7,8 @@ Page({
       title: '新鲜梨花带雨',
       price: 0.01,
       stock: '有货',
-      detail: '这里是梨花带雨详情。',
+      //detail: '这里是梨花带雨详情。',
+      detail: "http://127.0.0.1:8080/images/b1.jpg",
       parameter: '125g/个',
       service: '不支持退货'
     },

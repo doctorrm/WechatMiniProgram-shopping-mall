@@ -7,7 +7,7 @@ swiper-item image {
     height: 100%;
 }
 
-.select-title,.newest-title{
+.select-title,.newest-title{/**首页中的子标题的字体样式*/
     width: 100%;
     padding:30rpx 0;
     height: 40rpx;

@@ -1,0 +1,188 @@
+[
+  {
+    "id":"guowei",
+    "banner":"/image/c1.png",
+    "cate":"????¡®3",
+    "detail":[
+      {
+        "thumb":"/image/c2.png",
+        "name":"?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c2.png",
+        "name": "?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      }
+    ]
+  },
+  {
+    "id": "shucai",
+    "banner": "/image/c1.png",
+    "cate": "¨¨¡±?¨¨??",
+    "detail": [
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 3??a"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 4??a"
+      }
+    ]
+  },
+  {
+    "id": "chaohuo",
+    "banner": "/image/c1.png",
+    "cate": "??¡¯¨¨¡ä¡ì",
+    "detail": [
+      {
+        "thumb": "/image/c2.png",
+        "name": "?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c2.png",
+        "name": "?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      }
+    ]
+  },
+  {
+    "id": "dianxin",
+    "banner": "/image/c1.png",
+    "cate": "??1???",
+    "detail": [
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 3??a"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 4??a"
+      }
+    ]
+  },
+  {
+    "id": "cucha",
+    "banner": "/image/c1.png",
+    "cate": "?2¡ª¨¨??",
+    "detail": [
+      {
+        "thumb": "/image/c2.png",
+        "name": "?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c4.png",
+        "name": "?£¤??????? 2??a"
+      },
+      {
+        "thumb": "/image/c3.png",
+        "name": "?o¡é??¡ê 500g"
+      },
+      {
+        "thumb": "/image/c2.png",
+        "name": "?¡é¡§¨¨?¡À??|¨¦?¡§ 3??a"
+      }
+    ]
+  },
+  {
+    "id": "danfan",
+    "banner": "/image/c1.png",
+    "cate": "?¡¤?¨¦£¤-",
+    "detail": [
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 3??a"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s6.png",
+        "name": "?¡ã??¡À3"
+      },
+      {
+        "thumb": "/image/s5.png",
+        "name": "¨¨?1¨¨?? 500g"
+      },
+      {
+        "thumb": "/image/s4.png",
+        "name": "?¡°??-? 4??a"
+      }
+    ]
+  }
+]

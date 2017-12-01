@@ -25,7 +25,9 @@
         <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">产品参数</view>
         <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">售后保障</view>
         <view class="goods-content">
-            <view wx:if="{{curIndex === 0}}">{{goods.detail}}</view>
+            <view wx:if="{{curIndex === 0}}">
+            <image src='{{goods.detail}}' ></image>
+            </view>
             <view wx:if="{{curIndex === 1}}">{{goods.parameter}}</view>
             <view wx:if="{{curIndex === 2}}">{{goods.service}}</view>
         </view>

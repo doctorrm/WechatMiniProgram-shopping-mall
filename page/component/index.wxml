@@ -7,7 +7,7 @@
         </block>
     </swiper>
     <view class="selected">
-        <view class="select-title"><text>精选主题</text></view>
+        <view class="select-title"><text>精选</text></view>
         <view class="select-top">
             <view class="select-top-small">
                 <navigator url="list/list">
@@ -27,7 +27,7 @@
         </view>
     </view>
     <view class="newest">
-        <view class="newest-title"><text>最近新品</text></view>
+        <view class="newest-title"><text>新品</text></view>
         <view class="newest-box">
             <view class="newest-list">
                 <navigator url="details/details">

@@ -11,13 +11,11 @@ Page({
         detail:[],
         curIndex: 0,
         isScroll: false,
-        toView: 'guowei'
+        toView: 'guowei'/*默认定位到哪个view*/
     },
     onReady(){
         var self = this;
-        wx.request({
-            url:'http://www.gdfengshuo.com/api/wx/cate-detail.txt',
-            success(res){
+        wx.request({                      url:'http://www.gdfengshuo.com/api/wx/cate-detail.txt',            success(res){
                 self.setData({
                     detail : res.data
                 })
