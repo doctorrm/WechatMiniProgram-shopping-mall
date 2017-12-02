@@ -1,20 +1,21 @@
 // page/component/details/details.js
 Page({
-  data:{
+  data: {
     goods: {
       id: 1,
       image: '/image/goods1.png',
       title: '新鲜梨花带雨',
       price: 0.01,
-      stock: '有货',
       //detail: '这里是梨花带雨详情。',
       detail: "http://127.0.0.1:8080/images/b1.jpg",
       parameter: '125g/个',
-      service: '不支持退货'
+      service: '不支持退货',
+      model: 'good'
     },
     num: 1,
     pics: [],
-    tests:[],
+    tests: [],
+    main_pic:'',
     totalNum: 0,
     hasCarts: false,
     curIndex: 0,
@@ -23,26 +24,41 @@ Page({
   },
 
 
-  onReady() {//获取详情
-   var self = this;
-    wx.request({
-      url: 'http://localhost:8080/yMybatis/good/get_all',
-       success(res) {
-         console.log(res.data);
-         self.setData({
-           pics: res.data,
-          
-         });
-         
-      }
-    });
+  // onReady() {//获取详情
+  //   var self = this;
+  //   wx.request({
+  //     url: 'http://localhost:8080/yMybatis/good/get_all',
+  //     success(res) {
+  //       //console.log(res.data);
+  //       for (let i = 0; i < res.data.length; i++) {
+  //         console.log("success!!!")
+  //         // var te=new te[res.data.length]
+  //         // console.log(te.length)        
+  //       };
+  //       self.setData({
+  //         pics: res.data,
+  //       });
+
+  //     }
+  //   });
+  // },
+
+  //获取从首页穿过来的数据
+  onLoad: function (options) {
+    var bean = options.model - 1;
+
+    this.setData({
+      model: bean,
+      tests: options.urls.split(','),
+      main_pic:options.main_pic
+    })
   },
 
   addCount() {
     let num = this.data.num;
     num++;
     this.setData({
-      num : num
+      num: num
     })
   },
 
@@ -54,15 +70,15 @@ Page({
     self.setData({
       show: true
     })
-    setTimeout( function() {
+    setTimeout(function () {
       self.setData({
         show: false,
-        scaleCart : true
+        scaleCart: true
       })
-      setTimeout( function() {
+      setTimeout(function () {
         self.setData({
           scaleCart: false,
-          hasCarts : true,
+          hasCarts: true,
           totalNum: num + total
         })
       }, 200)
@@ -76,5 +92,5 @@ Page({
       curIndex: index
     })
   }
- 
+
 })

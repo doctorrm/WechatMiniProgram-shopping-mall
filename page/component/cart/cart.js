@@ -75,7 +75,7 @@ Page({
    */
   addCount(e) {
     const index = e.currentTarget.dataset.index;
-    let carts = this.data.carts;
+    let carts = this.data.carts;    
     let num = carts[index].num;
     num = num + 1;
     carts[index].num = num;

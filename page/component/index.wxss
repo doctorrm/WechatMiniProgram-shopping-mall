@@ -50,5 +50,9 @@ swiper-item image {
     margin: 20rpx 0 10rpx;
 }
 .newest-box .newest-list .newest-text{
-    font-size: 30rpx;
+    font-size: 32rpx;
+}
+.newest-text-price{
+    font-size: 32rpx;
+    color: #ff7800
 }

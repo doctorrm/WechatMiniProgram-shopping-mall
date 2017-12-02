@@ -1,113 +1,64 @@
 <view class="main">
-    <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
-        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-            <swiper-item>
-                <image src="{{item}}" class="slide-image" width="100%"/>
-            </swiper-item>
-        </block>
-    </swiper>
-    <view class="selected">
-        <view class="select-title"><text>精选</text></view>
-        <view class="select-top">
-            <view class="select-top-small">
-                <navigator url="list/list">
-                    <image src="/image/s1.png"></image>
-                </navigator>
-            </view>
-            <view class="select-top-small">
-                <navigator url="list/list">
-                    <image src="/image/s2.png"></image>
-                </navigator>
-            </view>
-        </view>
-        <view class="select-bottom">
-            <navigator url="list/list">
-                <image src="/image/s3.png"></image>
-            </navigator>
-        </view>
+{{even_goods[1].goodName[1]}}
+{{new_even}}
+
+  <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="selected">
+    <view class="select-title">
+      <text>精选</text>
     </view>
-    <view class="newest">
-        <view class="newest-title"><text>新品</text></view>
-        <view class="newest-box">
-  
-  <view wx:for="{{goods}}"  wx:key="index" data-id="{{item.goodId}}">
-             <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="{{item.goodMainUrl}}"></image>
-                    <view class="newest-text"><text>{{item.goodName}}</text></view>
-                    <view class="newest-text"><text>￥ {{item.goodPrice}}</text></view>
-                </navigator>
-            </view>
-  
-   </view> 
-<!-- 
-
-
-
-
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s4.png"></image>
-                    <view class="newest-text"><text>瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子瓜子</text></view>
-                    <view class="newest-text"><text>￥ 0.01</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s5.png"></image>
-                    <view class="newest-text"><text>芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜芹菜半斤</text></view>
-                    <view class="newest-text"><text>￥ 0.02</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s6.png"></image>
-                    <view class="newest-text"><text>素米 375g</text></view>
-                    <view class="newest-text"><text>￥ 0.03</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s4.png"></image>
-                    <view class="newest-text"><text>瓜子 100g</text></view>
-                    <view class="newest-text"><text>￥ 0.01</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s5.png"></image>
-                    <view class="newest-text"><text>芹菜 半斤</text></view>
-                    <view class="newest-text"><text>￥ 0.02</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s6.png"></image>
-                    <view class="newest-text"><text>素米 375g</text></view>
-                    <view class="newest-text"><text>￥ 0.03</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s4.png"></image>
-                    <view class="newest-text"><text>瓜子 100g</text></view>
-                    <view class="newest-text"><text>￥ 0.01</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s5.png"></image>
-                    <view class="newest-text"><text>芹菜 半斤</text></view>
-                    <view class="newest-text"><text>￥ 0.02</text></view>
-                </navigator>
-            </view>
-            <view class="newest-list">
-                <navigator url="details/details">
-                    <image src="/image/s6.png"></image>
-                    <view class="newest-text"><text>素米 375g</text></view>
-                    <view class="newest-text"><text>￥ 0.03</text></view>
-                </navigator>
-            </view> -->
-        </view>
+    <view class="select-top">
+      <view class="select-top-small">
+        <navigator url="list/list">
+          <image src="/image/s1.png"></image>
+        </navigator>
+      </view>
+      <view class="select-top-small">
+        <navigator url="list/list">
+          <image src="/image/s2.png"></image>
+        </navigator>
+      </view>
     </view>
+    <view class="select-bottom">
+      <navigator url="list/list">
+        <image src="/image/s3.png"></image>
+      </navigator>
+    </view>
+  </view>
+  <view class="newest">
+    <view class="newest-title">
+      <text>新品</text>
+    </view>
+  <!--必须要两个分别奇偶纪录才会呈现左右效果  -->
+    <view class="newest-box">
+      <view wx:for="{{odd_goods}}" wx:key="{{index}}" class="newest-list">
+        <navigator url="details/details?model={{item.goodId}}&urls={{item.goodDetailUrls}}&main_pic={{item.goodMainUrl}}">
+          <image src="{{item.goodMainUrl}}"></image>
+          <view class="newest-text">
+            <text>{{item.goodName}}</text>
+          </view>
+          <view class="newest-text-price">
+            <text>￥ {{item.goodPrice}}</text>
+          </view>
+        </navigator>
+      </view>
+      <view wx:for="{{even_goods}}" wx:key="{{index}}" class="newest-list">
+        <navigator url="details/details?model={{item.goodId}}&urls={{item.goodDetailUrls}}&main_pic={{item.goodMainUrl}}">
+          <image src="{{item.goodMainUrl}}"></image>
+          <view class="newest-text">
+            <text>{{item.goodName}}</text>
+          </view>
+          <view class="newest-text-price">
+            <text>￥ {{item.goodPrice}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
 </view>
