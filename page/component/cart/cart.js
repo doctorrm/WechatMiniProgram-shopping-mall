@@ -7,18 +7,27 @@ Page({
     selectAllStatus:true,    // 全选状态，默认全选
     obj:{
         name:"hello"
-    }
+    },
+    model:''
   },
-  onShow() {
+
+  onShow() {//网络请求从数据库中获取购物车信息,比onReady先执行，实时显示购物车状态   
+    var self = this;
+    wx.request({
+      url: 'http://localhost:8080/yMybatis/cart/get_all',
+      success(res) {
+        console.log(res.data);
+        self.setData({
+          carts: res.data,
+          //new_even:res.data[2].goodName.substr(3,6)//good  
+        });
+      }
+    });
     this.setData({
       hasList: true,
-      carts:[
-        {id:1,title:'新鲜芹菜 半斤',image:'/image/s5.png',num:4,price:0.01,selected:true},
-        {id:2,title:'素米 500g',image:'/image/s6.png',num:1,price:0.03,selected:true}
-      ]
     });
-    this.getTotalPrice();
   },
+
   /**
    * 当前商品选中事件
    */
@@ -112,7 +121,7 @@ Page({
     let total = 0;
     for(let i = 0; i<carts.length; i++) {         // 循环列表得到每个数据
       if(carts[i].selected) {                     // 判断选中才会计算价格
-        total += carts[i].num * carts[i].price;   // 所有价格加起来
+        total += carts[i].num * carts[i].goodPrice;   // 所有价格加起来
       }
     }
     this.setData({                                // 最后赋值到data中渲染到页面

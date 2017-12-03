@@ -25,7 +25,7 @@
       "pagePath": "page/component/index",
       "iconPath": "image/12.png",
       "selectedIconPath": "image/11.png",
-      "text": "主页"
+      "text": "首页"
     }, {
       "pagePath": "page/component/category/category",
       "iconPath": "image/22.png",

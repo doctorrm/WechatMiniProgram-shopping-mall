@@ -1,7 +1,4 @@
 <view class="main">
-{{even_goods[1].goodName[1]}}
-{{new_even}}
-
   <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>
@@ -9,6 +6,9 @@
       </swiper-item>
     </block>
   </swiper>
+
+   
+
   <view class="selected">
     <view class="select-title">
       <text>精选</text>
@@ -38,7 +38,7 @@
   <!--必须要两个分别奇偶纪录才会呈现左右效果  -->
     <view class="newest-box">
       <view wx:for="{{odd_goods}}" wx:key="{{index}}" class="newest-list">
-        <navigator url="details/details?model={{item.goodId}}&urls={{item.goodDetailUrls}}&main_pic={{item.goodMainUrl}}">
+        <navigator url="details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
           <image src="{{item.goodMainUrl}}"></image>
           <view class="newest-text">
             <text>{{item.goodName}}</text>
@@ -49,7 +49,7 @@
         </navigator>
       </view>
       <view wx:for="{{even_goods}}" wx:key="{{index}}" class="newest-list">
-        <navigator url="details/details?model={{item.goodId}}&urls={{item.goodDetailUrls}}&main_pic={{item.goodMainUrl}}">
+        <navigator url="details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
           <image src="{{item.goodMainUrl}}"></image>
           <view class="newest-text">
             <text>{{item.goodName}}</text>

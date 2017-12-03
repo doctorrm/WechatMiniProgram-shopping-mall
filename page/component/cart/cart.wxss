@@ -36,6 +36,7 @@
     float: right;
     height: 105rpx;
     line-height: 50rpx;
+     color: #ff7800;
 }
 .cart-list .cart-count-box{
     position: absolute;
@@ -100,7 +101,7 @@
 }
 .cart-toatl-price{
     float: right;
-    width: 120rpx;
+    width: 140rpx;   
 }
 
 .cart-no-data{

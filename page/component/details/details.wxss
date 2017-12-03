@@ -106,7 +106,8 @@
 }
 .goods-to-cart{
     width: 210rpx;
-    padding-right: 75rpx;
+    padding-right: 5rpx;
+
 }
 .goods-cart-img{
     position: absolute;
@@ -143,4 +144,8 @@
 }
 .goods-content{
     padding: 40rpx;
+}
+.goods-price-color{
+    font-size: 32rpx;
+    color: #ff7800
 }
