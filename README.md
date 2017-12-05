@@ -1,3 +1,15 @@
+#效果（数据库指向的图片没上传，可以自行网上找）
+![](image/wx1.png) 
+![](image/wx2.png) 
+![](image/wx3.png) 
+![](image/wx4.png) 
+![](image/wx5.png) 
+![](image/wx6.png) 
+![](image/wx7.png) 
+![](image/wx8.png) 
+![](image/wx9.png) 
+![](image/wx10.png) 
+#以下是那个开源项目的README.md
 # wxapp-mall
 微信小程序 商城
 
@@ -29,3 +41,5 @@
 需要安装有微信开发者工具。
 把项目下载到本地。
 在微信开发者工具中打开该项目则可预览。
+
+
