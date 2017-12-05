@@ -35,7 +35,7 @@ swiper-item image {
 .newest-box .newest-list{
     display: inline-block;
     width: 325rpx;
-    height: 325rpx;
+    height: 440rpx;
     margin:0 20rpx 20rpx 0;
     border-radius: 10px;
     text-align: center;
@@ -45,8 +45,8 @@ swiper-item image {
     margin-right: 0;
 }
 .newest-box .newest-list image{
-    width: 175rpx;
-    height: 175rpx;
+    width: 275rpx;
+    height: 275rpx;
     margin: 20rpx 0 10rpx;
 }
 .newest-box .newest-list .newest-text{

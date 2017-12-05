@@ -35,7 +35,7 @@ page,.main{
 .cate-box .cate-banner image{
     display: block;
     width: 100%;
-    height: 190rpx;
+    height: 290rpx;
 }
 .cate-title{
     position: relative;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.goodMapper">
+
+	<select id="getGood" parameterType="int" resultType="org.yi.po.Good">
+		select * from good where good_id=#{good_id}
+	</select>
+	<select id="getAll" resultType="org.yi.po.Good">
+		select * from good where good_id not in (111,112,113)
+	</select>
+	<select id="getAllOdd" resultType="org.yi.po.Good">
+		select * from good where good_id%2!=0 and good_id not in (111,112,113)
+	</select>
+	<select id="getAllEven" resultType="org.yi.po.Good">
+		select * from good where good_id%2!=1 and good_id not in (111,112,113)
+	</select>	
+	<select id="getCartInfo" resultType="org.yi.po.Good">
+		select good_id,good_name,good_price,good_main_url from good where good_id=#{good_id}
+	</select>	
+	<select id="getByType" resultType="org.yi.po.Good">
+		select * from good where good_type=#{goodType}
+	</select>	
+	<select id="getTitle" resultType="org.yi.po.Good">
+		select * from good  where good_id in (111,112,113)
+	</select>
+</mapper>

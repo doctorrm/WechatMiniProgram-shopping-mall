@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.orderMapper">
+
+	<select id="getAll" resultType="org.yi.po.Order">
+		select * from `order`
+	</select>
+	<insert id="insert">
+		insert into `order`(good_name,good_price,good_main_url,good_num) values (#{goodName},#{goodPrice},#{goodMainUrl},#{goodNum})
+	</insert>
+	<delete id="deleteAll">
+		delete from `order`
+	</delete>
+</mapper>

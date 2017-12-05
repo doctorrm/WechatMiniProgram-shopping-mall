@@ -1,13 +1,13 @@
 <view class="main">
   <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
-    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" width="100%" />
-      </swiper-item>
+    <block wx:for="{{title_goods}}" wx:key="{{index}}">
+      <navigator url="details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
+        <swiper-item>
+          <image src="{{item.goodMainUrl}}" class="slide-image" width="100%" />
+        </swiper-item>
+      </navigator>
     </block>
   </swiper>
-
-   
 
   <view class="selected">
     <view class="select-title">
@@ -15,19 +15,19 @@
     </view>
     <view class="select-top">
       <view class="select-top-small">
-        <navigator url="list/list">
-          <image src="/image/s1.png"></image>
+        <navigator url="list/list?type_male='male'">
+          <image src="http://localhost:8080/images/分类/man.jpg"></image>
         </navigator>
       </view>
       <view class="select-top-small">
-        <navigator url="list/list">
-          <image src="/image/s2.png"></image>
+        <navigator url="list/list?type_female='female'">
+          <image src="http://localhost:8080/images/分类/woman.jpg"></image>
         </navigator>
       </view>
     </view>
     <view class="select-bottom">
-      <navigator url="list/list">
-        <image src="/image/s3.png"></image>
+      <navigator url="list/list?type_children='children'">
+        <image src="http://localhost:8080/images/分类/down.jpg"></image>
       </navigator>
     </view>
   </view>
@@ -35,13 +35,28 @@
     <view class="newest-title">
       <text>新品</text>
     </view>
-  <!--必须要两个分别奇偶纪录才会呈现左右效果  -->
+    <!--必须要两个分别奇偶纪录才会呈现左右效果  -->
     <view class="newest-box">
       <view wx:for="{{odd_goods}}" wx:key="{{index}}" class="newest-list">
         <navigator url="details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
           <image src="{{item.goodMainUrl}}"></image>
           <view class="newest-text">
-            <text>{{item.goodName}}</text>
+            <text>{{item.goodName[0]}}</text>
+            <text>{{item.goodName[1]}}</text>
+            <text>{{item.goodName[2]}}</text>
+            <text>{{item.goodName[3]}}</text>
+            <text>{{item.goodName[4]}}</text>
+            <text>{{item.goodName[5]}}</text>
+            <text>{{item.goodName[6]}}</text>
+            <text>{{item.goodName[7]}}</text>
+            <text>{{item.goodName[8]}}</text>
+            <text>{{item.goodName[9]}}</text>
+            <text>{{item.goodName[10]}}</text>
+            <text>{{item.goodName[11]}}</text>
+            <text>{{item.goodName[12]}}</text>
+            <text>{{item.goodName[13]}}</text>
+            <text>{{item.goodName[14]}}</text>
+            <text>{{item.goodName[15]}}</text> ...
           </view>
           <view class="newest-text-price">
             <text>￥ {{item.goodPrice}}</text>
@@ -52,7 +67,22 @@
         <navigator url="details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
           <image src="{{item.goodMainUrl}}"></image>
           <view class="newest-text">
-            <text>{{item.goodName}}</text>
+            <text>{{item.goodName[0]}}</text>
+            <text>{{item.goodName[1]}}</text>
+            <text>{{item.goodName[2]}}</text>
+            <text>{{item.goodName[3]}}</text>
+            <text>{{item.goodName[4]}}</text>
+            <text>{{item.goodName[5]}}</text>
+            <text>{{item.goodName[6]}}</text>
+            <text>{{item.goodName[7]}}</text>
+            <text>{{item.goodName[8]}}</text>
+            <text>{{item.goodName[9]}}</text>
+            <text>{{item.goodName[10]}}</text>
+            <text>{{item.goodName[11]}}</text>
+            <text>{{item.goodName[12]}}</text>
+            <text>{{item.goodName[13]}}</text>
+            <text>{{item.goodName[14]}}</text>
+            <text>{{item.goodName[15]}}</text> ...
           </view>
           <view class="newest-text-price">
             <text>￥ {{item.goodPrice}}</text>

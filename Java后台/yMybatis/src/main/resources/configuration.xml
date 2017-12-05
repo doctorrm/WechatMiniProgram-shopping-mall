@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- 配置数据库连接信息,记得修改数据库名称 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/general_test" />
+				<property name="username" value="root" />
+				<property name="password" value="buzhidao" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<!-- 注册userMapper.xml文件，this is an example,should be changed in real work. 
+			userMapper.xml位于me.gacl.mapping这个包下，所以resource写成me/gacl/mapping/userMapper.xml -->
+		<mapper resource="org/yi/dao/humanMapper.xml" /> <!-- 普通的mapper xml方式 -->
+		<!-- <mapper class="dao.AnnoHumanMapper"/> --><!-- 使用注解方式 -->
+		<mapper resource="org/yi/dao/goodMapper.xml" />
+		<mapper resource="org/yi/dao/cartMapper.xml" />
+		<mapper resource="org/yi/dao/categoryMapper.xml" />
+		<mapper resource="org/yi/dao/orderMapper.xml"/>
+	</mappers>
+</configuration>

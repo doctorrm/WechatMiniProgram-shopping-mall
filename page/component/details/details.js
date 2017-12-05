@@ -7,7 +7,7 @@ Page({
       goodPrice: '',
       goodMainUrl: '',
       goodDetailUrls: [],
-      parameter: '125g/个',
+      parameter: '产品参数相关',
       service: '不支持退货'
     },
     num: 1,
@@ -30,7 +30,7 @@ Page({
     })
   },
 
-  click: function (e) {//网络请求向数据库中存入购物车信息  
+  click: function (e) {//点击‘添加到购物车按钮’：网络请求向数据库中存入购物车信息  
     var model = this.data.goodName;
     wx.request({
       url: "http://localhost:8080/yMybatis/cart/add?goodId="+this.data.goodId+"&goodName="+this.data.goodName+"&goodPrice="+this.data.goodPrice+"&goodMainUrl="+this.data.goodMainUrl+"&goodDetailUrls="+this.data.goodDetailUrls,

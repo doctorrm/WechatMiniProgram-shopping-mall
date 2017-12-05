@@ -9,9 +9,9 @@
 }
 .newest-list{
     display: inline-block;
-    width: 347rpx;
-    height: 347rpx;
-    margin:0 15rpx 10rpx 0;
+    width: 325rpx;
+    height: 440rpx;
+    margin:0 20rpx 20rpx 0;
     border-radius: 10px;
     text-align: center;
     background: #f5f6f5;
@@ -20,11 +20,15 @@
     margin-right: 0;
 }
 .newest-list image{
-    width: 180rpx;
-    height: 180rpx;
-    margin: 30rpx 0 20rpx;
+    width: 275rpx;
+    height: 275rpx;
+    margin: 20rpx 0 10rpx;
 }
 .newest-list .newest-text{
     font-size: 32rpx;
     line-height: 45rpx;
+}
+.newest-text-price{
+    font-size: 32rpx;
+    color: #ff7800
 }

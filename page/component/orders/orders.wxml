@@ -1,19 +1,33 @@
 <view class="main">
     <navigator url="../address/address">
         <view wx:if="{{hasAddress}}" class="orders-address">
-            <text class="orders-address-name">收货人: {{address.name}}</text>
-            <text class="orders-address-phone">电话: {{address.phone}}</text>
-            <view class="orders-address-detail">{{address.detail}}</view>
+            <view class="orders-address-name">收货人: {{address.name}}</view>
+            <view class="orders-address-phone">详细地址： {{address.phone}}</view>
+            <view class="orders-address-detail">电话：{{address.detail}}</view>
         </view>
         <view wx:else class="orders-no-address">添加收货地址</view>
     </navigator>
 
     <view class="orders-box">
         <view wx:for="{{orders}}" wx:key="index" class="orders-list">
-            <image class="orders-thumb" src="{{item.image}}"></image>
-            <view class="orders-pro-name">{{item.title}}</view>
-            <view class="orders-pro-price">￥{{item.price}}</view>
-            <view class="orders-count-num">×{{item.num}}</view>
+             <image class="orders-thumb" src="{{item.goodMainUrl}}"></image>
+            <view class="orders-pro-name">
+            {{item.goodName[0]}}
+            {{item.goodName[1]}}
+            {{item.goodName[2]}}
+            {{item.goodName[3]}}
+            {{item.goodName[4]}}
+            {{item.goodName[5]}}
+            {{item.goodName[6]}}
+            {{item.goodName[7]}}
+            {{item.goodName[8]}}
+            {{item.goodName[9]}}
+            {{item.goodName[10]}}
+            {{item.goodName[11]}}
+            ...
+            </view> 
+            <view class="orders-pro-price">￥{{item.goodPrice}}</view>
+            <view class="orders-count-num">×{{item.goodNum}}</view> 
         </view>
     </view>
 

@@ -81,7 +81,7 @@
 }
 .orders-detail{
     position: relative;
-    height: 120rpx;
+    height: 130rpx;
     padding: 35rpx 20rpx 35rpx 170rpx;
     border-bottom: 1rpx solid #e9e9e9;
 }

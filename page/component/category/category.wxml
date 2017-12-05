@@ -1,29 +1,40 @@
 <view class="main">
-    <view class="categroy-left">
-        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
-            bindtap="switchTab"
-            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
-    </view>
+  <view class="categroy-left">
+    <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+  </view>
 
-    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
-         <block wx:for="{{detail}}" wx:for-index wx:key="idx">
-            <view id="{{item.id}}" class="cate-box">
-                <view class="cate-banner">
-                    <image src="{{item.banner}}"></image>
-                </view>
-                <view class="cate-title">
-                    <text>{{item.cate}}</text>
-                </view>
-                <view class="product">
-                    <view class="product-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="val">
-                        <navigator url="../list/list">
-                            <image src="{{val.thumb}}"></image>
-                            <view class="classname"><text>{{val.name}}</text></view>
-                        </navigator>
-                    </view>
-                </view>
-            </view>
-        </block>        
-    </scroll-view>
+  <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+    <block wx:for="{{detail}}" wx:for-index wx:key="idx">
+      <view id="{{item.dbCategory.catType}}" class="cate-box">
+        <view class="cate-banner">
+          <image src="{{item.dbCategory.catBanner}}"></image>
+        </view>
+        <view class="cate-title">
+          <text>{{item.dbCategory.catName}}</text>
+          <!-- <text>{{item.dbGoods[1].goodName}}</text> -->
+        </view>
+        <view class="product">
+          <view class="product-list" wx:for="{{item.dbGoods}}" wx:key="index" wx:for-item="val">
+            <navigator url="../details/details?good_id={{val.goodId}}&good_name={{val.goodName}}&good_main_url={{val.goodMainUrl}}&good_price={{val.goodPrice}}&good_detail_urls={{val.goodDetailUrls}}">
+              <image class="test" src="{{val.goodMainUrl}}"></image>
+              <view class="classname">
+                <text>{{val.goodName[0]}}</text>
+                <text>{{val.goodName[1]}}</text>
+                <text>{{val.goodName[2]}}</text>
+                <text>{{val.goodName[3]}}</text>
+                <text>{{val.goodName[4]}}</text>
+                <text>{{val.goodName[5]}}</text>
+                <text>{{val.goodName[6]}}</text>
+                <text>{{val.goodName[7]}}</text>
+                <text>{{val.goodName[8]}}</text>
+                <text>{{val.goodName[9]}}</text>
+                <text>{{val.goodName[10]}}</text> ...
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
 
 </view>

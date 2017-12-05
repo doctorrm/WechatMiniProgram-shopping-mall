@@ -8,9 +8,9 @@
     border-bottom: 30rpx solid #ededed;
 }
 .goods-box .goods-thumb{
-    width: 300rpx;
-    height: 300rpx;
-    margin: 35rpx 0 125rpx;
+    width: 650rpx;
+    height: 650rpx;
+    margin: 35rpx 0 45rpx;
 }
 
 .to-carts-icon{

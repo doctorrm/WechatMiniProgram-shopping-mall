@@ -1,29 +1,64 @@
 <view class="main">
-    <view class="banner">
-        <image src="/image/list1.png"></image>
+  <view class="banner">
+    <image src="http://localhost:8080/images/list-top.jpg"></image>
+  </view>
+
+  <view class="list-box">
+    <view class="newest-list" wx:for="{{all_goods}}" wx:key="{{index}}">
+      <navigator url="../details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
+        <image src="{{item.goodMainUrl}}"></image>
+        <view class="newest-text">
+          <text>{{item.goodName[0]}}</text>
+          <text>{{item.goodName[1]}}</text>
+          <text>{{item.goodName[2]}}</text>
+          <text>{{item.goodName[3]}}</text>
+          <text>{{item.goodName[4]}}</text>
+          <text>{{item.goodName[5]}}</text>
+          <text>{{item.goodName[6]}}</text>
+          <text>{{item.goodName[7]}}</text>
+          <text>{{item.goodName[8]}}</text>
+          <text>{{item.goodName[9]}}</text>
+          <text>{{item.goodName[10]}}</text>
+          <text>{{item.goodName[11]}}</text>
+          <text>{{item.goodName[12]}}</text>
+          <text>{{item.goodName[13]}}</text>
+          <text>{{item.goodName[14]}}</text>
+          <text>{{item.goodName[15]}}</text> ...
+        </view>
+        <view class="newest-text-price">
+          <text>￥ {{item.goodPrice}}</text>
+        </view>
+      </navigator>
+    </view>
+    
+    <view class="newest-list" wx:for="{{all_goods}}" wx:key="{{index}}">
+      <navigator url="../details/details?good_id={{item.goodId}}&good_name={{item.goodName}}&good_main_url={{item.goodMainUrl}}&good_price={{item.goodPrice}}&good_detail_urls={{item.goodDetailUrls}}">
+        <image src="{{item.goodMainUrl}}"></image>
+        <view class="newest-text">
+          <text>{{item.goodName[0]}}</text>
+          <text>{{item.goodName[1]}}</text>
+          <text>{{item.goodName[2]}}</text>
+          <text>{{item.goodName[3]}}</text>
+          <text>{{item.goodName[4]}}</text>
+          <text>{{item.goodName[5]}}</text>
+          <text>{{item.goodName[6]}}</text>
+          <text>{{item.goodName[7]}}</text>
+          <text>{{item.goodName[8]}}</text>
+          <text>{{item.goodName[9]}}</text>
+          <text>{{item.goodName[10]}}</text>
+          <text>{{item.goodName[11]}}</text>
+          <text>{{item.goodName[12]}}</text>
+          <text>{{item.goodName[13]}}</text>
+          <text>{{item.goodName[14]}}</text>
+          <text>{{item.goodName[15]}}</text> ...
+        </view>
+        <view class="newest-text-price">
+          <text>￥ {{item.goodPrice}}</text>
+        </view>
+      </navigator>
     </view>
 
-    <view class="list-box">
-        <view class="newest-list">
-            <navigator url="../details/details">
-                <image src="/image/s4.png"></image>
-                <view class="newest-text"><text>瓜子 100g</text></view>
-                <view class="newest-text"><text>￥ 0.01</text></view>
-            </navigator>
-        </view>
-        <view class="newest-list">
-            <navigator url="../details/details">
-                <image src="/image/s5.png"></image>
-                <view class="newest-text"><text>芹菜 半斤</text></view>
-                <view class="newest-text"><text>￥ 0.02</text></view>
-            </navigator>
-        </view>
-        <view class="newest-list">
-            <navigator url="../details/details">
-                <image src="/image/s6.png"></image>
-                <view class="newest-text"><text>素米 375g</text></view>
-                <view class="newest-text"><text>￥ 0.03</text></view>
-            </navigator>
-        </view>
-    </view>
+
+
+  </view>
 </view>

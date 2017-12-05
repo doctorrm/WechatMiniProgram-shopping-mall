@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.cartMapper">
+
+	<select id="getAll" resultType="org.yi.po.Cart">
+		select * from cart
+	</select>
+	<insert id="insert">
+		insert into cart(good_id,good_name,good_price,good_main_url,good_detail_urls) values (#{goodId},#{goodName},#{goodPrice},#{goodMainUrl},#{goodDetailUrls})
+	</insert>
+</mapper>

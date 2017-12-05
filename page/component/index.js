@@ -9,6 +9,7 @@ Page({
     autoplay: false,
     odd_goods: ["nae", "john"],
     even_goods: [],
+    title_goods:[],
     new_even: "jjfdsafsdafsdafasf",
     interval: 3000,
     duration: 800,
@@ -25,7 +26,7 @@ Page({
       success(res) {
         self.setData({
           odd_goods: res.data,
-          //new_even:res.data[2].goodName.substr(3,6)//good       
+          //new_even:res.data[2].goodName.substr(3,6)//good      
         });
       }
     });
@@ -37,16 +38,14 @@ Page({
         });
       },
     });
+    wx.request({
+      url: 'http://localhost:8080/yMybatis/good/get_title',
+      success(res) {
+        self.setData({
+          title_goods: res.data,
+        });
+      },
+    });
   },
-
-  // onShow: function () {
-  //   let odd_goods = this.data.odd_goods;
-  //   for (let i = 0; i < 119; i++) {
-  //     console.log("okaaa " + odd_goods + " end")
-  //   }
-  //   for (let i = 0; i < odd_goods.length; i++) {
-  //     this.new_even[i] = this.odd_goods[1].goodName.substr(2, 20)
-  //   }
-  // }
 
 })
