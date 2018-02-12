@@ -1,18 +1,27 @@
-#效果（数据库指向的图片在image/images中）
+# 效果（数据库指向的图片在image/images中）
 
-![](image/wx1.png) 
+![](image/wx1.png)
+ 
 ![](image/wx2.png) 
+
 ![](image/wx3.png) 
+
 ![](image/wx4.png) 
+
 ![](image/wx5.png) 
+
 ![](image/wx6.png) 
+
 ![](image/wx7.png) 
+
 ![](image/wx8.png) 
+
 ![](image/wx9.png) 
+
 ![](image/wx10.png) 
 
 
-#以下是那个开源项目的README.md
+# 以下是那个开源项目的README.md
 
 # wxapp-mall
 微信小程序 商城
@@ -35,10 +44,15 @@
 
 ## 实现效果
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/1.jpg) 
+
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/2.jpg) 
+
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/3.jpg) 
+
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/4.jpg) 
+
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/5.jpg) 
+
 ![image](https://raw.githubusercontent.com/lin-xin/mini-apps-mall/master/image/6.jpg) 
 
 ## 运行
